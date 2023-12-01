@@ -1,10 +1,11 @@
 import 'dart:async';
-import 'package:kwlib/src/flow/flow_ram.dart';
+import 'package:kwlib/src/flow/flow_pipe.dart';
+//import 'package:kwlib/src/flow/flow_ram.dart';
 
 ///
 class FlowCtl<T> {
   ///
-  FlowCtl(FlowRam<T> parent, {bool brodcast = false}) : _parent = parent {
+  FlowCtl(FlowPipe<T> parent, {bool brodcast = false}) : _parent = parent {
     if (brodcast) {
       _ctl = StreamController.broadcast();
     } else {
@@ -13,7 +14,7 @@ class FlowCtl<T> {
     stream = _ctl.stream;
     _parent.addFlowCtl(this);
   }
-  final FlowRam<T> _parent;
+  final FlowPipe<T> _parent;
   late StreamController<T> _ctl;
 
   ///

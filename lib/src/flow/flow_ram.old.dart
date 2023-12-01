@@ -1,18 +1,22 @@
+///
+/// THE FLOWRAM before pipe split.
+/*
 import 'dart:collection';
-import 'package:kwlib/src/flow/flow_pipe.dart';
+import 'package:kwlib/src/flow/flow_ctl.dart';
+
 
 ///
-class FlowRam<T> extends FlowPipe<T> {
+class FlowRam<T> {
   ///
   FlowRam(
     T init, {
     this.historyLength = 6,
-    super.i,
+    this.i,
   }) : _data = init;
-  //final List<FlowCtl<T>> _flowCtls = [];
+  final List<FlowCtl<T>> _flowCtls = [];
 
   /// The log callback if used.
-  //final void Function(dynamic)? i;
+  final void Function(dynamic)? i;
 
   ///
   final int historyLength;
@@ -21,16 +25,16 @@ class FlowRam<T> extends FlowPipe<T> {
   final Queue<T> _history = Queue();
 
   ///
-  //void addFlowCtl(FlowCtl<T> flowCtl) => _flowCtls.add(flowCtl);
+  void addFlowCtl(FlowCtl<T> flowCtl) => _flowCtls.add(flowCtl);
 
   ///
-  //void removeFlowCtl(FlowCtl<T> flowCtl) => _flowCtls.remove(flowCtl);
+  void removeFlowCtl(FlowCtl<T> flowCtl) => _flowCtls.remove(flowCtl);
 
   ///
-  //FlowCtl<T> asFlowCtl({bool brodcast = false}) => FlowCtl<T>(
-  //      this,
-  //      brodcast: brodcast,
-  //    );
+  FlowCtl<T> asFlowCtl({bool brodcast = false}) => FlowCtl<T>(
+        this,
+        brodcast: brodcast,
+      );
 
   ///
   T get value => _data;
@@ -41,7 +45,6 @@ class FlowRam<T> extends FlowPipe<T> {
   ///
   void notifyAll() {
     if (i != null) {
-      // THE LOG
       // ignore: prefer_null_aware_method_calls
       i!(value);
     }
@@ -71,9 +74,9 @@ class FlowRam<T> extends FlowPipe<T> {
   }
 
   void _notifyAll() {
-    super.pipeToAll(value);
-    //for (final ctl in _flowCtls) {
-    //  ctl.add(data: value);
-    //}
+    for (final ctl in _flowCtls) {
+      ctl.add(data: value);
+    }
   }
 }
+*/
