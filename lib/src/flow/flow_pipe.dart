@@ -61,7 +61,7 @@ class FlowPipe<T> {
   //  _notifyAll();
   //}
 
-  void pipeToAll(T value) {
+  void pipe(T value) {
     for (final ctl in _flowCtls) {
       ctl.add(data: value);
     }
