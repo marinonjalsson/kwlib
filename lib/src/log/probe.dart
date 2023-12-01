@@ -42,7 +42,7 @@ class Probe {
   );
 
   static const _excludePaths = [
-    'package:kwlib/src/bash/probe.dart',
+    'package:kwlib/src/log/probe.dart',
     'package:kwlib/src/flow/flow_pipe.dart',
     'package:flutter/',
     'dart:',
