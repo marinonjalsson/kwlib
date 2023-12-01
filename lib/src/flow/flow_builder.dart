@@ -1,17 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:kwlib/src/flow/flow_ctl.dart';
-import 'package:kwlib/src/flow/flow_ram.dart';
+import 'package:kwlib/src/flow/flow_pipe.dart';
+//import 'package:kwlib/src/flow/flow_ram.dart';
 
 /// FlowBuilder with one FlowRam
 class FlowBuilder<T> extends StatefulWidget {
   ///
-  const FlowBuilder({required this.flowRam, required this.builder, super.key});
+  const FlowBuilder({required this.flowPipe, required this.builder, super.key});
 
   ///
-  final Widget Function(T) builder;
+  final Widget Function(T?) builder;
 
   ///
-  final FlowRam<T> flowRam;
+  final FlowPipe<T> flowPipe;
 
   @override
   State<FlowBuilder<T>> createState() => _FlowBuilderState<T>();
@@ -22,7 +23,7 @@ class _FlowBuilderState<T> extends State<FlowBuilder<T>> {
 
   @override
   void initState() {
-    flowCtl = widget.flowRam.asFlowCtl();
+    flowCtl = widget.flowPipe.asFlowCtl();
     super.initState();
   }
 
@@ -35,9 +36,9 @@ class _FlowBuilderState<T> extends State<FlowBuilder<T>> {
   @override
   Widget build(BuildContext context) => StreamBuilder<T>(
         stream: flowCtl.stream,
-        initialData: widget.flowRam.value,
+        //initialData: widget.flowRam.value,
         builder: (_, AsyncSnapshot<T> snapshot) {
-          final value = snapshot.data ?? widget.flowRam.value;
+          final value = snapshot.data; //?? widget.flowRam.value;
           return widget.builder(value);
         },
       );

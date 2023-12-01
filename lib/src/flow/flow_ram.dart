@@ -41,12 +41,6 @@ class FlowRam<T> extends FlowPipe<T> {
   ///
   void notifyAll() {
     super.pipe(value);
-    //if (i != null) {
-    //  // THE LOG
-    //  // ignore: prefer_null_aware_method_calls
-    //  i!(value);
-    //}
-    //_notifyAll();
   }
 
   ///
@@ -68,7 +62,7 @@ class FlowRam<T> extends FlowPipe<T> {
         _history.removeLast();
       }
     }
-    notifyAll();
+    super.pipe(value);
   }
 
   //void _notifyAll() {
