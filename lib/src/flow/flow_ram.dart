@@ -71,7 +71,7 @@ class FlowRam<T> extends FlowPipe<T> {
   }
 
   void _notifyAll() {
-    super.pipeToAll(value);
+    super.pipe(value);
     //for (final ctl in _flowCtls) {
     //  ctl.add(data: value);
     //}
