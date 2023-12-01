@@ -42,8 +42,8 @@ class Probe {
   );
 
   static const _excludePaths = [
-    'package:sudoku_shared/src/bash/probe.dart',
-    'package:sudoku_shared/src/bash/flow_ram.dart',
+    'package:kwlib/src/bash/probe.dart',
+    'package:kwlib/src/flow/flow_pipe.dart',
     'package:flutter/',
     'dart:',
   ];

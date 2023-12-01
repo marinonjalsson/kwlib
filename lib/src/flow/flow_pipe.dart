@@ -62,6 +62,10 @@ class FlowPipe<T> {
   //}
 
   void pipe(T value) {
+    if (i != null) {
+      // ignore: prefer_null_aware_method_calls
+      i!('Pipe:$value');
+    }
     for (final ctl in _flowCtls) {
       ctl.add(data: value);
     }

@@ -40,12 +40,13 @@ class FlowRam<T> extends FlowPipe<T> {
 
   ///
   void notifyAll() {
-    if (i != null) {
-      // THE LOG
-      // ignore: prefer_null_aware_method_calls
-      i!(value);
-    }
-    _notifyAll();
+    super.pipe(value);
+    //if (i != null) {
+    //  // THE LOG
+    //  // ignore: prefer_null_aware_method_calls
+    //  i!(value);
+    //}
+    //_notifyAll();
   }
 
   ///
@@ -57,23 +58,23 @@ class FlowRam<T> extends FlowPipe<T> {
   ///
   void set(T value) {
     _data = value;
-    if (i != null) {
-      // ignore: prefer_null_aware_method_calls
-      i!(value);
-    }
+    //if (i != null) {
+    //  // ignore: prefer_null_aware_method_calls
+    //  i!(value);
+    //}
     if (0 < historyLength) {
       _history.addFirst(_data);
       if (historyLength < _history.length) {
         _history.removeLast();
       }
     }
-    _notifyAll();
+    notifyAll();
   }
 
-  void _notifyAll() {
-    super.pipe(value);
-    //for (final ctl in _flowCtls) {
-    //  ctl.add(data: value);
-    //}
-  }
+  //void _notifyAll() {
+  //  super.pipe(value);
+  //  //for (final ctl in _flowCtls) {
+  //  //  ctl.add(data: value);
+  //  //}
+  //}
 }
