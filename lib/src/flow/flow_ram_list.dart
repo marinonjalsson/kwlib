@@ -8,7 +8,7 @@ class FlowRamList<T> extends FlowPipe<List<T>> {
   });
 
   ///
-  List<T> get list => <T>[];
+  final list = <T>[];
 
   ///
   void add(T item) {
