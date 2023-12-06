@@ -9,8 +9,6 @@ dependencies:
   flutter:
     sdk: flutter
   google_fonts: ^6.1.0
-  klib:
-    path: /opt/gits/kapp/klib/
   logger: ^2.0.2+1
   very_good_analysis: ^5.1.0
 
@@ -19,7 +17,7 @@ dev_dependencies:
     sdk: flutter
 
 environment:
-  sdk: '>=3.0.0 <4.0.0'
+  sdk: '>=3.2.0 <4.0.0'
 
 assets:
   - google_fonts/
