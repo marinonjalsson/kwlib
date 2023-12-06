@@ -1,8 +1,8 @@
 name: kwlib
-version: 1.0.12
+version: 1.0.13
 description: Widget Library for Kapp. Alls konar sameiginlegt fyrir Flutter Widgets
 homepage: 
-repository: ssh://ctrl:/mnt/gits/kwlib.git
+repository: github:marinonjalsson/kwlib.git
 publish_to: none
 
 dependencies:
