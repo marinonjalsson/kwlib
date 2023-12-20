@@ -9,7 +9,6 @@ dependencies:
   flutter:
     sdk: flutter
   google_fonts: ^6.1.0
-  logger: ^2.0.2+1
   very_good_analysis: ^5.1.0
 
 dev_dependencies:
