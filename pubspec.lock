@@ -104,10 +104,10 @@ packages:
     description:
       path: "."
       ref: HEAD
-      resolved-ref: ceb57b77e04ba40e5dc449922291f6de158e2b21
+      resolved-ref: a18ba026ed21b632f547b0e0643bac0145f3028c
       url: "github.com:marinonjalsson/klib.git"
     source: git
-    version: "1.0.2"
+    version: "1.0.3"
   logger:
     dependency: transitive
     description:
