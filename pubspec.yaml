@@ -12,6 +12,7 @@ dependencies:
   klib:
     git: 
       url: github.com:marinonjalsson/klib.git
+      ref: main
 
 dev_dependencies:
   flutter_test:

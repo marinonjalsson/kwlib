@@ -103,11 +103,11 @@ packages:
     dependency: "direct main"
     description:
       path: "."
-      ref: HEAD
-      resolved-ref: a18ba026ed21b632f547b0e0643bac0145f3028c
+      ref: main
+      resolved-ref: "198be19097d0a21d2ca7972c7fcbd4c5a4a0a679"
       url: "github.com:marinonjalsson/klib.git"
     source: git
-    version: "1.0.3"
+    version: "1.0.4"
   logger:
     dependency: transitive
     description:
