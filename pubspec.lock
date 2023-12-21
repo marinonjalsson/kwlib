@@ -99,23 +99,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "4.0.2"
-  klib:
-    dependency: "direct main"
-    description:
-      path: "."
-      ref: main
-      resolved-ref: "198be19097d0a21d2ca7972c7fcbd4c5a4a0a679"
-      url: "github.com:marinonjalsson/klib.git"
-    source: git
-    version: "1.0.4"
-  logger:
-    dependency: transitive
-    description:
-      name: logger
-      sha256: "6bbb9d6f7056729537a4309bda2e74e18e5d9f14302489cc1e93f33b3fe32cac"
-      url: "https://pub.dev"
-    source: hosted
-    version: "2.0.2+1"
   matcher:
     dependency: transitive
     description:
@@ -314,5 +297,5 @@ packages:
     source: hosted
     version: "1.0.3"
 sdks:
-  dart: ">=3.2.3 <4.0.0"
+  dart: ">=3.2.0 <4.0.0"
   flutter: ">=3.7.0"

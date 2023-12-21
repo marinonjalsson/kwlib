@@ -9,10 +9,6 @@ dependencies:
   flutter:
     sdk: flutter
   google_fonts: ^6.1.0
-  klib:
-    git: 
-      url: github.com:marinonjalsson/klib.git
-      ref: main
 
 dev_dependencies:
   flutter_test:
